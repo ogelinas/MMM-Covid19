@@ -1,0 +1,42 @@
+/*
+ *
+ * MMM-Covid19
+ *
+ * Olivier Gélinas
+ * MIT Licensed.
+ *
+ * Custom here your css module
+ *
+ */
+
+tr.total {
+    margin-top: 2px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+tr.change {
+    padding-top: 0px;
+    margin-top: 0px;
+    margin-bottom: 2px;
+}
+
+ td.location {
+    text-align:    left;
+    vertical-align: text-bottom;
+}
+
+ td.data {
+    text-align:     center;
+    vertical-align: text-bottom;
+    margin-left:    2px;
+    margin-right:   2px;
+}
+
+span.plus {
+    color:red;
+}
+
+span.minus {
+    color: lime;
+}

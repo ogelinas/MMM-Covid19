@@ -1,0 +1,11 @@
+{
+  "TITLE": "Title",
+  "UPDATE": "Update",
+  "cases": "cas",
+  "fatalities": "décès",
+  "tests": "tests",
+  "hospitalizations": "hospitalisation",
+  "criticals": "critiques",
+  "recoveries": "rétablis",
+  "vaccinations": "vaccinés"
+}
