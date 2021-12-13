@@ -2,7 +2,7 @@
   "name": "MMM-Covid19",
   "version": "1.0.0",
   "description": "Module Tracking Covid-19 in Canada",
-  "main": "MagicMirror-Module-Template.js",
+  "main": "MMM-Covid19.js",
   "scripts": {
     "test": "./node_modules/grunt/bin/grunt"
   },
