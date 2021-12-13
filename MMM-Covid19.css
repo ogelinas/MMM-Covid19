@@ -9,6 +9,10 @@
  *
  */
 
+div.summary {
+    display:        inline-block;
+ }
+
 table.summary {
     display:        inline-block;
  }

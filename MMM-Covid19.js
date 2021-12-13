@@ -116,10 +116,14 @@ Module.register("MMM-Covid19", {
 		// header.innerHTML = "Covid-19";
 		// wrapper.appendChild(header);
 
+		var covid_wrapper = document.createElement("div");
+		covid_wrapper.classList.add("summary");
+		wrapper.appendChild(covid_wrapper);
+
 		// Table
 		var table = document.createElement("table");
 		table.classList.add("summary");
-		wrapper.appendChild(table);
+		covid_wrapper.appendChild(table);
 
 		// Row
 		var tr = document.createElement("tr");
