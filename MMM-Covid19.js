@@ -9,6 +9,7 @@
 
 Module.register("MMM-Covid19", {
 	defaults: {
+		header: "Covid-19",
 		updateInterval: 60*60*1000,
 		retryDelay: 5000,
 		data_sets: [
@@ -115,24 +116,20 @@ Module.register("MMM-Covid19", {
 		// header.innerHTML = "Covid-19";
 		// wrapper.appendChild(header);
 
-
 		// Table
 		var table = document.createElement("table");
+		table.classList.add("summary");
 		wrapper.appendChild(table);
-		table.className = "small";
-
 
 		// Row
 		var tr = document.createElement("tr");
 		table.appendChild(tr);
-		tr.className = "light";
-		table.append(tr);
 
 		// Location
 		var td = document.createElement("td");
 		td.innerHTML = "";
-		td.classList.add("normal", "bright", "location");
-		tr.append(td);
+		td.classList.add("small", "bright", "location");
+		tr.appendChild(td);
 
 
 		// total_cases
@@ -140,7 +137,7 @@ Module.register("MMM-Covid19", {
 			var td = document.createElement("td");
 			td.innerHTML = "Cas";
 			td.classList.add("xsmall", "light", "data");
-			tr.append(td);
+			tr.appendChild(td);
 		}
 		
 
@@ -149,7 +146,7 @@ Module.register("MMM-Covid19", {
 			var td = document.createElement("td");
 			td.innerHTML = "Décès";
 			td.classList.add("xsmall", "light", "data");
-			tr.append(td);
+			tr.appendChild(td);
 		}
 		
 
@@ -158,7 +155,7 @@ Module.register("MMM-Covid19", {
 			var td = document.createElement("td");
 			td.innerHTML = "Test";
 			td.classList.add("xsmall", "light", "data");
-			tr.append(td);
+			tr.appendChild(td);
 		}
 		
 
@@ -167,7 +164,7 @@ Module.register("MMM-Covid19", {
 			var td = document.createElement("td");
 			td.innerHTML = "Hospi.";
 			td.classList.add("xsmall", "light", "data");
-			tr.append(td);
+			tr.appendChild(td);
 		}
 		
 
@@ -176,7 +173,7 @@ Module.register("MMM-Covid19", {
 			var td = document.createElement("td");
 			td.innerHTML = "Critique";
 			td.classList.add("xsmall", "light", "data");
-			tr.append(td);	
+			tr.appendChild(td);	
 		}
 		
 
@@ -185,7 +182,7 @@ Module.register("MMM-Covid19", {
 			var td = document.createElement("td");
 			td.innerHTML = "Rétabli";
 			td.classList.add("xsmall", "light", "data");
-			tr.append(td);
+			tr.appendChild(td);
 		}
 		
 
@@ -194,7 +191,7 @@ Module.register("MMM-Covid19", {
 			var td = document.createElement("td");
 			td.innerHTML = "Vacciné";
 			td.classList.add("xsmall", "light", "data");
-			tr.append(td);	
+			tr.appendChild(td);	
 		}
 		
 
@@ -203,16 +200,16 @@ Module.register("MMM-Covid19", {
 		self.config.data_sets.forEach(data_set => {
 			// Row
 			var tr = document.createElement("tr");
-			table.appendChild(tr);
-			tr.classList.add("total");
+			//table.appendChild(tr);
+			// tr.classList.add("total");
 			tr.id = data_set.id + '_total';
-			table.append(tr);
+			table.appendChild(tr);
 
 			// Location
 			var td = document.createElement("td");
 			td.innerHTML = "";
-			td.classList.add("normal", "bright", "location");
-			tr.append(td);
+			td.classList.add("small", "bright", "location");
+			tr.appendChild(td);
 
 			// total
 
@@ -221,7 +218,7 @@ Module.register("MMM-Covid19", {
 				var td = document.createElement("td");
 				td.innerHTML = "";
 				td.classList.add("xsmall", "bright", "data");
-				tr.append(td);
+				tr.appendChild(td);
 			}
 			
 
@@ -230,7 +227,7 @@ Module.register("MMM-Covid19", {
 				var td = document.createElement("td");
 				td.innerHTML = "";
 				td.classList.add("xsmall", "bright", "data");
-				tr.append(td);
+				tr.appendChild(td);
 			}
 			
 
@@ -239,7 +236,7 @@ Module.register("MMM-Covid19", {
 				var td = document.createElement("td");
 				td.innerHTML = "";
 				td.classList.add("xsmall", "bright", "data");
-				tr.append(td);
+				tr.appendChild(td);
 			}
 			
 
@@ -248,7 +245,7 @@ Module.register("MMM-Covid19", {
 				var td = document.createElement("td");
 				td.innerHTML = "";
 				td.classList.add("xsmall", "bright", "data");
-				tr.append(td);
+				tr.appendChild(td);
 			}
 			
 
@@ -257,7 +254,7 @@ Module.register("MMM-Covid19", {
 				var td = document.createElement("td");
 				td.innerHTML = "";
 				td.classList.add("xsmall", "bright", "data");
-				tr.append(td);
+				tr.appendChild(td);
 			}
 			
 
@@ -266,7 +263,7 @@ Module.register("MMM-Covid19", {
 				var td = document.createElement("td");
 				td.innerHTML = "";
 				td.classList.add("xsmall", "bright", "data");
-				tr.append(td);
+				tr.appendChild(td);
 			}
 			
 
@@ -275,7 +272,7 @@ Module.register("MMM-Covid19", {
 				var td = document.createElement("td");
 				td.innerHTML = "";
 				td.classList.add("xsmall", "bright", "data");
-				tr.append(td);
+				tr.appendChild(td);
 			}
 			
 
@@ -284,23 +281,23 @@ Module.register("MMM-Covid19", {
 
 			// Row
 			var tr = document.createElement("tr");
-			table.appendChild(tr);
+			// table.appendChild(tr);
 			tr.classList.add("change");
 			tr.id = data_set.id + '_change';
-			table.append(tr);
+			table.appendChild(tr);
 
 			// Location - Date
 			var td = document.createElement("td");
 			td.innerHTML = "";
 			td.classList.add("xsmall", "light", "location");
-			tr.append(td);
+			tr.appendChild(td);
 
 			// change_cases
 			if (this.config.display.includes("cases")) {
 				var td = document.createElement("td");
 				td.innerHTML = "";
 				td.classList.add("xsmall", "bright", "data");
-				tr.append(td);
+				tr.appendChild(td);
 			}
 			
 
@@ -309,7 +306,7 @@ Module.register("MMM-Covid19", {
 				var td = document.createElement("td");
 				td.innerHTML = "";
 				td.classList.add("xsmall", "bright", "data");
-				tr.append(td);
+				tr.appendChild(td);
 			}
 			
 
@@ -318,7 +315,7 @@ Module.register("MMM-Covid19", {
 				var td = document.createElement("td");
 				td.innerHTML = "";
 				td.classList.add("xsmall", "bright", "data");
-				tr.append(td);
+				tr.appendChild(td);
 			}
 			
 
@@ -327,7 +324,7 @@ Module.register("MMM-Covid19", {
 				var td = document.createElement("td");
 				td.innerHTML = "";
 				td.classList.add("xsmall", "bright", "data");
-				tr.append(td);
+				tr.appendChild(td);
 			}
 			
 
@@ -336,7 +333,7 @@ Module.register("MMM-Covid19", {
 				var td = document.createElement("td");
 				td.innerHTML = "";
 				td.classList.add("xsmall", "bright", "data");
-				tr.append(td);
+				tr.appendChild(td);
 			}
 			
 
@@ -345,7 +342,7 @@ Module.register("MMM-Covid19", {
 				var td = document.createElement("td");
 				td.innerHTML = "";
 				td.classList.add("xsmall", "bright", "data");
-				tr.append(td);
+				tr.appendChild(td);
 			}
 			
 
@@ -354,7 +351,7 @@ Module.register("MMM-Covid19", {
 				var td = document.createElement("td");
 				td.innerHTML = "";
 				td.classList.add("xsmall", "bright", "data");
-				tr.append(td);
+				tr.appendChild(td);
 			}
 			
 
@@ -523,7 +520,8 @@ Module.register("MMM-Covid19", {
 		//FIXME: This can be load a one file javascript definition
 		return {
 			en: "translations/en.json",
-			es: "translations/es.json"
+			es: "translations/es.json",
+			fr: "translations/fr.json",
 		};
 	},
 
